@@ -14,11 +14,13 @@ function show(req, res){
 }
 
 function newSkill(req, res) {
-    res.render('skills/new');
+    res.render('skills/new.ejs');
 }
 
 function create(req, res) {
+    console.log(req.body, '<-req.body')
     Skill.create(req.body);
+    // when we change data, redirect
     res.redirect('/skills');
 }
 
