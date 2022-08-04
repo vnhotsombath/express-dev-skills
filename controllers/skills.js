@@ -1,8 +1,11 @@
-const Skill = require('../models/skill');
+const Skill = require('../models/skill')
 
 function index(req, res, next) {
-    res.send('Skills Route!');
+    res.render('skills/index.ejs', {
+        skills: Skill.getAll()
+    });
 }
+
 
 module.exports = {
     index
