@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const skillsController = require('../controllers/skills');
+const skillController = require('../controllers/skills');
 
 // require the Skill model
 //router.get('/', skillsController.index);
 
 /* GET users listing. */
-router.get('/', skillsController.index);
+router.get('/', skillController.index);
 
 module.exports = router;
