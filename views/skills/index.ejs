@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Express Dev Skills</title>
 </head>
 <body>
     <h1>Skills</h1>
     <ul>
-        <% skills.forEach(skill => { %>
-         <li>
-           <a href="/skills/<%= s.id %>"><% s.skill %> </a>
-            - 
-            <% s.done ? 'done' : 'not done' %> 
-         </li>
-        <% }) %>
+            <% skills.forEach(s => { %>
+             <li>
+                 <a href="/skills/<%=skills.id %>"><%= skills.skill %></a>
+                 -
+                 <%= skills.acquired ? 'Acquired' : 'Not Acquired' %>  
+             </li>
+            <% }) %>
     </ul>
 </body>
 </html>

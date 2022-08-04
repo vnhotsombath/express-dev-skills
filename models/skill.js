@@ -1,13 +1,18 @@
 const skills = [
-    {id: 125223, skill: 'html', done: true},
-    {id: 127904, skill: 'css', done: true},
-    {id: 139608, skill: 'javascript', done:false}
+    {id: 246803, skill: 'html', acquired: true},
+    {id: 134524, skill: 'css', acquired: true},
+    {id: 332423, skill: 'javascript', acquired: false}
 ];
 
-module.exports = {
-    getAll
-};
-
-function getAll() {
-    return skills;
-}
+  module.exports = {
+	getAll,
+	getOne
+  };
+  
+  function getOne(id) {
+	// Use the Array.prototype.find iterator method
+	return skills.find(skill => skill.id === parseInt(id));
+  }
+  function getAll() {
+	return skills;
+  }
