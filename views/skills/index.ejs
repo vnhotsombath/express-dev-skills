@@ -11,9 +11,9 @@
     <ul>
             <% skills.forEach(s => { %>
              <li>
-                 <a href="/skills/<%=skill.id %>"><%= skill.skill %></a>
+                 <a href="/skills/<%=s.id %>"><%= s.skill %></a>
                  -
-                 <%= skill.acquired ? 'Acquired' : 'Not Acquired' %> 
+                 <%= s.acquired ? 'Acquired' : 'Not Acquired' %> 
                  <form action="/skills/<%=s.id %>?_method=DELETE" class="delete-form" method="POST">
                     <button type="submit">Delete Express Dev Skill</button>
                   </form> 

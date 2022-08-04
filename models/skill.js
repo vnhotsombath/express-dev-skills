@@ -30,5 +30,5 @@ const skills = [
 
   function deleteOne(id) {
     const idx = skills.findIndex(skill => skill.id === parseInt(id));
-    skills.splide(idx, 1);
+    skills.splice(idx, 1);
   }
